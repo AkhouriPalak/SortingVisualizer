@@ -45,7 +45,7 @@ class App extends Component{
       <Bar key={index} 
         index = {index} 
         length = {value} 
-        color = {this.state.colorKey[index] } />);
+        color = {0} />);
 });
 
     return (
