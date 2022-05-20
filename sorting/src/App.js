@@ -3,21 +3,27 @@ import './App.css';
 import Bar from './components/Bar.js';
 
 class App extends Component{
-  state = {
-    array: [],
-    arraySteps: [],
-    colorKey: [],
-    colorSteps: [],
-    currentSteps: 0,
-    count: 0,
-    delay: 100,
-    algorithm: '',
-    timeouts: [],
-   };
+  constructor() {
+    super();
+    this.state = {
+      array: [],
+      arraySteps: [],
+      colorKey: [],
+      colorSteps: [],
+      currentSteps: 0,
+      count: 5,
+      delay: 100,
+      algorithm: '',
+      timeouts: [],
+     };
+    
+  }
+  
 
-   comonentDidMount()
+   componentDidMount()
    {
      this.generateRandomArray();
+     console.log("here")
    }
 
    generateRandomNumber = (min,max) =>{
@@ -36,7 +42,7 @@ class App extends Component{
      this.setState({
        array : temp,
        arraySteps: [temp],
-     });
+     },()=>{console.log("here")});
    };
 
   render(){
@@ -50,9 +56,16 @@ class App extends Component{
 
     return (
       <div className='app'>
-      {bars}
+      {/* {bars} */}
+      
+      {this.state.array.map((value,index) => {
+     return(<Bar key={index} 
+      index = {index} 
+      length = {value} 
+      color = {0} />);
+})}
       </div>
-    );
+    ); 
      
     
   }

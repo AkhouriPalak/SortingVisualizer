@@ -4,6 +4,7 @@ import './Bar.css';
 function Bar({index,length,color})
 {
     const[len, setLen] = useState(length)
+    console.log(length,color,"bar")
 
     const colors =[['rgba(61, 90, 241, 0.5)','rgba(61, 90, 241, 0.2)'],
                    ['rgba(255, 48, 79, 1)','rgba(255, 48, 79, 0.5)'],
