@@ -57,13 +57,22 @@ class App extends Component{
     return (
       <div className='app'>
       {/* {bars} */}
+      <div className='frame'>
+      <div className='barsDiv container card'>{bars}
+
+      
       
       {this.state.array.map((value,index) => {
      return(<Bar key={index} 
       index = {index} 
       length = {value} 
-      color = {0} />);
-})}
+      color = {0}
+       />);
+  })}
+      </div>
+      </div>
+      <div className='control-pannel'></div>
+      <div className='control-pannel'></div>
       </div>
     ); 
      

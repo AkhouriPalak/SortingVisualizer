@@ -63,15 +63,20 @@ function Bar({index,length,color})
             <div className='side left'style={right_left}>
             <div className='color-bar left-color-bar'style={right_left}></div>
             </div>
-            <div className='side front'style={front_bottom}>
+            <div className='side front'>
+                <div className='color-bar front-color-bar' style={front_bottom}></div>
                <input 
                type='number' 
                length={length}
                 style={inputStyle}
                 value={len}
+                className='input'
                 onChange= {handleChange}
                />
                </div>
+               <div className='side back'>
+               <div className='color-bar back-color-bar' style={front_bottom}></div>
+        </div>
         </div>
         </>
     );
